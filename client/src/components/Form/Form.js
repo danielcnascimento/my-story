@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useStyle from "./styles";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import FileBase from "react-file-base64";
-import {useDispatch} from "react-redux";
-import {createPost} from '../../actions/posts';
+import { useDispatch, useSelector } from "react-redux";
+import { createPost, updatePost } from "../../actions/posts";
 
-const Form = () => {
+//GET THE CURRENT POST
+
+const Form = ({ setCurrentId, currentId }) => {
+
+  const post = useSelector((state) =>  currentId ? state.posts.find((p) => p._id === currentId) : null );
+
   const classes = useStyle();
 
   const dispatch = useDispatch();
@@ -18,14 +23,22 @@ const Form = () => {
     selectedFiles: "",
   });
 
-  console.log(postData.selectedFiles);
+  useEffect(() => {
+    if (post) {
+      setPostData(post);
+    }
+  }, [post]);
 
-  const clear = () => {}
+  const clear = () => {};
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(createPost(postData));
+    if (currentId) {
+      dispatch(updatePost(currentId, postData));
+    } else {
+      dispatch(createPost(postData));
+    }
   };
 
   return (
@@ -77,27 +90,30 @@ const Form = () => {
           <FileBase
             type="file"
             multiple={false}
-            onDone={({base64}) =>
+            onDone={({ base64 }) =>
               setPostData({ ...postData, selectedFiles: base64 })
             }
           />
         </div>
         <Button
-        className={classes.buttonSubmit}
+          className={classes.buttonSubmit}
           variant="contained"
           color="primary"
           size="large"
           type="submit"
           fullWidth
         >
-          Submit</Button>
-        <Button 
-        variant="contained" 
-        color="secondary" 
-        size="small" 
-        fullWidth  
-        onClick={clear}
-        >Clean</Button>
+          Submit
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="small"
+          fullWidth
+          onClick={clear}
+        >
+          Clean
+        </Button>
       </form>
     </Paper>
   );
