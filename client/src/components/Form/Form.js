@@ -29,15 +29,24 @@ const Form = ({ setCurrentId, currentId }) => {
     }
   }, [post]);
 
-  const clear = () => {};
+  const clear = () => {
+      setCurrentId(null)
+      setPostData({creator: "",
+      title: "",
+      message: "",
+      tags: "",
+      selectedFiles: "",})
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (currentId) {
       dispatch(updatePost(currentId, postData));
+      clear();
     } else {
       dispatch(createPost(postData));
+      clear();
     }
   };
 
@@ -49,7 +58,7 @@ const Form = ({ setCurrentId, currentId }) => {
         className={`${classes.form} ${classes.root}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6">Creating a memory</Typography>
+        <Typography variant="h6">{ currentId ? 'Editing' : 'Creating'} a memory</Typography>
         <TextField
           name="creator"
           variant="outlined"
