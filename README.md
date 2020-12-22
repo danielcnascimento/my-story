@@ -13,6 +13,7 @@
 <img align="center" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
 <img align="center" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
 <img align="center" alt="ReactJs" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+<img align="center" alt="Redux" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/redux/redux.png" />
 <img align="center" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />
 <img align="center" alt="mongoose" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" />
 </p>
@@ -37,26 +38,44 @@
   </a>
 </p>
 
+<h2 align="center">About 📒 <i> Sobre </i></h2>
+<p align="center" > MyStory is a Social media app that help you to share memorable moments of your life, because the only thing that will never die it's our memories ! Feel free to share your happines and show people great moments of your life ! <br>  <br> <i> MyStory é um aplicativo de rede social que existe para ajudar a você compartilhar momentos memoráveis da sua vida! Porque a unica coisa que é eterna são as memorias que tivemos! Fique a vontade em compartilha-las e ver outras experiências vividas por outras pessoas.</i></ p>
+
+<br>
+<br>
+<img src="https://trello-attachments.s3.amazonaws.com/5db8df629e82fa748b5ecf01/5fe1344539cceb678ab72bcc/ae87cf8eb85ae1c4cc56d750a3c79c9f/criar-post.gif" width="550" height="300" />
+
+<br>
+<br>
+
 <p align="center" > Tools and languages used to build this art ! <br> <i> Ferramentas e linguagens que usei para criar esse projeto: </i></p >
 
-1. React Js <br>
-  ✅  Material UI for Design - GRID pattern <br>
-  ✅  JSX + CSS<br>
-  ✅  Redux<br>
-  ✅  Hooks<br>
+1. Client - Frontend  <br>
+<li> Material UI for Design - GRID pattern ✅</li>
+<li> JSX + CSS ✅</li>
+<li> Redux ✅</li>
+<li> Hooks ✅</li><br>
 
-2. Node Js <br>
-  ✅  Express<br>
-  ✅  MongoDB ( AWS Mongoose ATLAS)<br>
-  ✅  javascript<br>
-  ✅  MVC<br>
+2. Server - Backend  <br>
+<li> Express ✅</li>
+<li> MongoDB ( AWS Mongoose ATLAS) ✅</li>
+<li> javascript ✅</li>
+<li> MVC ✅</li>
+  
+  <br>
+  
+🎞️ All pictures of this project : <br>
+💅 See Figma: <br>
+🧐 Try MyStory App: https://my-stories.netlify.app/ <br>
   
 <p align="center">
 
-🔍 By the Way : I deploy server and connected to Front-end, so you can run the project, without running the Backend if you want :) <br> <br>
-<p align="center"> <i> Então: dei um deploy no backend, se quiser rodar apenas o front, voce concegue :) </i> </p> 
+⚡ By the Way... I deploy server and connected to Front-end, so you can run the project, without running the Backend if you want :) <br>
+<p align="center"> <i> Alias, dei um deploy no backend, se quiser rodar apenas o front, voce consegue :) </i> </p> 
 
 </p >
+
+
   
 
 
@@ -103,7 +122,9 @@
 I'm looking for opportunities in this stack ! 👀 <br>
 Contact me if you saw something interested you here.
 <br><br> 
-<br><i> Tenho interesse em de trabalhar nesta stack,<br> se voce viu algo que te interesse no meu trabalho, pode entrar em contato pela sessão direta acima ! </i>
+<br><i> Tenho interesse em de trabalhar nesta stack,<br> se voce viu algo que te interesse no meu trabalho, pode entrar em contato pela sessão direta acima ! (whatsapp) </i>
+
+<h6> special thank you for Hessa Ajaj - Team partner </h6>
 
 Your best
 
