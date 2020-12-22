@@ -64,7 +64,7 @@
   
   <br>
   
-🎞️ All pictures of this project : <br>
+🎞️ All pictures of this project : https://github.com/danielcnascimento/my-story/tree/main/images<br>
 💅 See Figma: <br>
 🧐 Try MyStory App: https://my-stories.netlify.app/ <br>
   
