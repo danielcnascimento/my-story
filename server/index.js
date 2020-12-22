@@ -14,7 +14,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hey this is my backend of my-story')
+    res.send("Welcome to Daniel's API, my-story")
 });
 
 
