@@ -5,6 +5,8 @@ import {FETCH_ALL,
     DELETE,
     } from './constants/actionTypes';
 
+import postValidation from '../lib/postValidation';
+
 //Action creator
 export const getPosts = () => async (dispatch) => {
     try {
@@ -18,13 +20,12 @@ export const getPosts = () => async (dispatch) => {
 }
 
 export const createPost = (post) => async (dispatch) => {
-    
     try {
+        postValidation(post);
         const { data } = await api.createPost(post)
-        
         dispatch({type: CREATE, payload: data})
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 
