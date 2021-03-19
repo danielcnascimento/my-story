@@ -8,8 +8,9 @@ import { createPost, updatePost } from "../../actions/posts";
 //GET THE CURRENT POST
 
 const Form = ({ setCurrentId, currentId }) => {
-
-  const post = useSelector((state) =>  currentId ? state.posts.find((p) => p._id === currentId) : null );
+  const post = useSelector((state) =>
+    currentId ? state.posts.find((p) => p._id === currentId) : null
+  );
 
   const classes = useStyle();
 
@@ -27,15 +28,17 @@ const Form = ({ setCurrentId, currentId }) => {
     if (post) {
       setPostData(post);
     }
-  }, [post]);
+  }, [currentId]);
 
   const clear = () => {
-      setCurrentId(null)
-      setPostData({creator: "",
+    setCurrentId(null);
+    setPostData({
+      creator: "",
       title: "",
       message: "",
       tags: "",
-      selectedFiles: "",})
+      selectedFiles: "",
+    });
   };
 
   const handleSubmit = (e) => {
@@ -43,11 +46,10 @@ const Form = ({ setCurrentId, currentId }) => {
 
     if (currentId) {
       dispatch(updatePost(currentId, postData));
-      clear();
     } else {
       dispatch(createPost(postData));
-      clear();
     }
+    clear();
   };
 
   return (
@@ -58,7 +60,9 @@ const Form = ({ setCurrentId, currentId }) => {
         className={`${classes.form} ${classes.root}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6">{ currentId ? 'Editing' : 'Creating'} a memory</Typography>
+        <Typography variant="h6">
+          {currentId ? "Editing" : "Creating"} a memory
+        </Typography>
         <TextField
           name="creator"
           variant="outlined"
@@ -93,7 +97,9 @@ const Form = ({ setCurrentId, currentId }) => {
           label="Tags"
           fullWidth
           value={postData.tags}
-          onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })}
+          onChange={(e) =>
+            setPostData({ ...postData, tags: e.target.value.split(",") })
+          }
         />
         <div className={classes.fileInput}>
           <FileBase
